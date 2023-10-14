@@ -1,6 +1,7 @@
 import React from 'react';
-import { makeStyles, Grid, Typography, Paper, Box } from '@material-ui/core';
+import {  Grid, Typography, Paper, Box } from '@mui/material';
 import personImage from '../Components/mom.jpg';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, Button, makeStyles } from '@material-ui/core';
+import { AppBar, Toolbar, Button } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    backgroundColor: '#ADD8E6', // Set the background color to light blue
+    backgroundColor: '#ADD8E6',
     boxShadow: 'none',
   },
   navButton: {
-    color: '#0A2647',
+    color: '#fff', // Set the text color to white
     textDecoration: 'none',
   },
   spacer: {
-    flexGrow: 1, // Create a spacer that pushes buttons to the right
+    flexGrow: 1,
   },
 }));
 
@@ -23,13 +24,13 @@ const Navbar = () => {
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
         <div className={classes.spacer} />
-        <Button component={Link} to="/" className={classes.navButton}>
+        <Button style={{color:'white'}} component={Link} to="/" classes={{root:classes.navButton}}>
           Home
         </Button>
-        <Button component={Link} to="/about" className={classes.navButton}>
+        <Button style={{color:'white'}} component={Link} to="/about" className={classes.navButton}>
           About
         </Button>
-        <Button component={Link} to="/contact" className={classes.navButton}>
+        <Button style={{color:'white'}} component={Link} to="/contact" className={classes.navButton}>
           Contact
         </Button>
       </Toolbar>

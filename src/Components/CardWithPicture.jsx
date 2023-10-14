@@ -1,7 +1,11 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Button, makeStyles } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Typography, Button, createTheme} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import image from './me.jpg';
+import { makeStyles } from '@mui/styles';
+import { create } from '@mui/material/styles/createTransitions';
+
+
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -29,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 2,
   },
 }));
+
 
 const CardWithPicture = () => {
   const classes = useStyles();
