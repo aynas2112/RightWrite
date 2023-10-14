@@ -1,9 +1,0 @@
-{
-    "build": {
-      "env": {
-        "VERCEL_GITHUB_COMMIT_REF": "main"
-      },
-      "command": "npm install --force"
-    }
-  }
-  
