@@ -14,6 +14,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center', // Center content vertically
     minHeight: '100vh', // Ensure the container takes at least the full viewport height
   },
+  nameContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center', // Center content horizontally
+    marginBottom: theme.spacing(4), // Add margin at the bottom of the name
+  },
   column: {
     display: 'flex',
     flexDirection: 'column',
@@ -38,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(2), // Add margin to the right of the quote
   },
   paragraphs: {
-    marginTop: theme.spacing(6), // Add margin to the top of the paragraphs
+    marginTop: theme.spacing(2), // Add margin to the top of the paragraphs
   },
 }));
 
@@ -47,9 +53,11 @@ const About = () => {
 
   return (
     <div className={classes.root}>
-      <Typography variant="h1" gutterBottom>
-        Mamta Chawla
-      </Typography>
+      <div className={classes.nameContainer}>
+        <Typography variant="h1" gutterBottom>
+          Mamta Chawla
+        </Typography>
+      </div>
       <Grid container spacing={4}>
         {/* Left Column */}
         <Grid item xs={12} md={6} className={classes.column}>

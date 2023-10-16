@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import {  Typography, Paper, TextField, Button } from '@mui/material';
+import { Typography, Paper, TextField, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,17 +8,18 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
-    marginTop: '7%', // Add margin to push the content down
+    padding: theme.spacing(2), // Add padding to the root element
   },
   formContainer: {
-    width: '400px',
-    padding: '30px',
-    marginBottom: '20px', // Add margin to increase space between the form and footer
+    width: '100%',
+    maxWidth: '400px',
+    padding: theme.spacing(3),
+    marginBottom: theme.spacing(3), // Add margin to increase space between the form and footer
   },
   form: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '20px',
+    gap: theme.spacing(2), // Add space between form elements
   },
 }));
 
@@ -52,10 +52,10 @@ const Contact = () => {
           message: '',
         });
       } else {
-        setMessage('Error submitting contact form. Please try again later.');
+        setMessage('Error submitting the contact form. Please try again later.');
       }
     } catch (error) {
-      setMessage('Error submitting contact form. Please try again later.');
+      setMessage('Error submitting the contact form. Please try again later.');
       console.error('Error:', error);
     }
   };
