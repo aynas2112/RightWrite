@@ -8,11 +8,15 @@ const useStyles = makeStyles((theme) => ({
     background: '#041C32', // Dark background color
     color: '#fff', // Light font color
     padding: theme.spacing(4), // Add some padding
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center', // Center content horizontally
+    justifyContent: 'center', // Center content vertically
+    minHeight: '100vh', // Ensure the container takes at least the full viewport height
   },
   column: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center', // Center content vertically
   },
   imageContainer: {
     position: 'relative',
@@ -33,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: 'italic',
     marginLeft: theme.spacing(2), // Add margin to the right of the quote
   },
+  paragraphs: {
+    marginTop: theme.spacing(6), // Add margin to the top of the paragraphs
+  },
 }));
 
 const About = () => {
@@ -40,13 +47,13 @@ const About = () => {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={15}>
+      <Typography variant="h1" gutterBottom>
+        Mamta Chawla
+      </Typography>
+      <Grid container spacing={4}>
         {/* Left Column */}
         <Grid item xs={12} md={6} className={classes.column}>
-          <Typography variant="h1" gutterBottom>
-            Mamta Chawla
-          </Typography>
-          <div>
+          <div className={classes.paragraphs}>
             <Typography variant="body1" paragraph>
               I'm a woman of many roles, each adding its own rich color to my life's canvas.
             </Typography>
