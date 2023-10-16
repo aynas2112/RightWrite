@@ -7,12 +7,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     background: '#041C32', // Dark background color
     color: '#fff', // Light font color
-    padding: theme.spacing(2), // Add some padding, reduced from 4 to 2
+    padding: theme.spacing(4), // Add some padding
   },
   column: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    alignItems: 'center', // Center content vertically
   },
   imageContainer: {
     position: 'relative',
@@ -26,16 +26,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
     height: 'auto',
     transition: 'transform 0.3s ease', // Match the transition with the container
+    marginLeft: theme.spacing(2), // Add margin to the right of the image
   },
   quote: {
     marginTop: theme.spacing(2),
     fontStyle: 'italic',
-  },
-  rightColumn: {
-    marginLeft: 0, // Remove margin for small screens
-    [theme.breakpoints.up('md')]: {
-      marginLeft: '15%', // Add margin for medium and larger screens
-    },
+    marginLeft: theme.spacing(2), // Add margin to the right of the quote
   },
 }));
 
@@ -44,23 +40,43 @@ const About = () => {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={4}>
+      <Grid container spacing={15}>
         {/* Left Column */}
         <Grid item xs={12} md={6} className={classes.column}>
-          <Typography variant="h5" gutterBottom> {/* Adjusted the typography variant */}
+          <Typography variant="h1" gutterBottom>
             Mamta Chawla
           </Typography>
-          <Typography variant="body2" paragraph> {/* Adjusted the typography variant */}
-            {/* Your paragraphs */}
-          </Typography>
+          <div>
+            <Typography variant="body1" paragraph>
+              I'm a woman of many roles, each adding its own rich color to my life's canvas.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Firstly, I'm a proud mother. It's a role that constantly teaches me, fills me with joy, and shows me the true meaning of love. Witnessing my children's growth and being their guiding light is an incredible journey.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              As a homemaker, I find immense pleasure in crafting a warm and inviting haven for my family. My home is a reflection of us, and I revel in the finer details, from arranging fresh blooms to experimenting with culinary creations.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Teaching is my profession, and my classroom is where I shine. It's my creative space, where I mold young minds, share knowledge, and ignite the spark of curiosity. Every day, I learn as much from my students as they do from me.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              My hidden passion is graphology. It might seem unusual, but deciphering handwriting has fascinated me for years. Handwriting is a window to one's personality, and I find the process of unveiling these secrets incredibly captivating.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              In all my roles, I give my all. Passion fuels my endeavors. Whether it's making a house a home, inspiring young hearts, or exploring the world of graphology, I tackle each challenge with zest and commitment.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Life's journey is beautiful, and I'm grateful for the diverse experiences that have shaped me. My family, my students, my home, and my love for graphology all contribute to the vibrant tapestry of my life.
+            </Typography>
+          </div>
         </Grid>
 
         {/* Right Column */}
-        <Grid item xs={12} md={4} className={`${classes.column} ${classes.rightColumn}`}>
+        <Grid item xs={12} md={4} className={classes.column}>
           <Paper elevation={3}>
             <Box p={3} className={classes.imageContainer}>
-              <Typography variant="body2" className={classes.quote}> {/* Adjusted the typography variant */}
-                "Passion is energy. Feel the power that comes from focusing on what excites you - Oprah Winfrey"
+              <Typography variant="h6" className={classes.quote}>
+                "Passion is energy. Feel the power that comes from focusing on what excites you-Oprah Winfrey"
               </Typography>
               <img src={personImage} alt="Person" className={classes.image} />
             </Box>
