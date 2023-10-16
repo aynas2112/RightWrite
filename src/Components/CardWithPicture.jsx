@@ -1,22 +1,25 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Button, createTheme} from '@mui/material';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import image from './me.jpg';
 import { makeStyles } from '@mui/styles';
-import { create } from '@mui/material/styles/createTransitions';
-
-
 
 const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 550,
     margin: 'auto',
-    marginTop: theme.spacing(140),
+    marginTop: theme.spacing(5), // Adjusted margin for smaller screens
     position: 'relative',
     zIndex: 1,
-    transition: 'transform 0.3s ease-in-out', // Add a transition for the 'transform' property
+    transition: 'transform 0.3s ease-in-out',
     '&:hover': {
-      transform: 'translateY(-5px) rotate(-8deg)', // Apply a translation and rotation on hover
+      transform: 'translateY(-5px) rotate(-8deg)',
     },
   },
   media: {
@@ -26,14 +29,9 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
   },
   cardContainer: {
-    position: 'absolute',
-    width: '100%',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    zIndex: 2,
+    position: 'relative', // Adjusted to 'relative' for stacking order
   },
 }));
-
 
 const CardWithPicture = () => {
   const classes = useStyles();
@@ -46,11 +44,7 @@ const CardWithPicture = () => {
   return (
     <div className={classes.cardContainer}>
       <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image={image}
-          title="Mamta Chawla"
-        />
+        <CardMedia className={classes.media} image={image} title="Mamta Chawla" />
         <CardContent>
           <Typography variant="h5" component="div">
             Mamta Chawla

@@ -11,7 +11,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           style={socialIconStyle}
         >
-          <FaInstagram size={32} color="#C13584" /> {/* Instagram color */}
+          <FaInstagram size={32} color="#C13584" />
         </a>
         <a
           href="https://www.facebook.com/mamta.chandna.31"
@@ -19,7 +19,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           style={socialIconStyle}
         >
-          <FaFacebook size={32} color="#1877F2" /> {/* Facebook color */}
+          <FaFacebook size={32} color="#1877F2" />
         </a>
         <a
           href="https://www.youtube.com/@Mamta.Chawla/featured"
@@ -27,15 +27,15 @@ const Footer = () => {
           rel="noopener noreferrer"
           style={socialIconStyle}
         >
-          <FaYoutube size={32} color="#FF0000" /> {/* YouTube color */}
+          <FaYoutube size={32} color="#FF0000" />
         </a>
         <a
-          href="mailto:mamtachawla699@gmail.com"  // Replace with your Gmail address
+          href="mailto:mamtachawla699@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           style={socialIconStyle}
         >
-          <FaEnvelope size={32} color="#FF0000" /> {/* Gmail color */}
+          <FaEnvelope size={32} color="#FF0000" />
         </a>
       </div>
     </footer>
@@ -44,18 +44,20 @@ const Footer = () => {
 
 // Define styles
 const footerStyle = {
-  background: '#ADD8E6', // Set the background color to light blue
+  background: '#ADD8E6',
   textAlign: 'center',
+  padding: '10px', // Add padding for spacing
 };
 
 const containerStyle = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  flexWrap: 'wrap', // Allow items to wrap to the next line on smaller screens
 };
 
 const socialIconStyle = {
-  margin: '0 10px',
+  margin: '10px', // Increase margin for spacing
   textDecoration: 'none',
 };
 
