@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Paper, TextField, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +35,7 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    axios.post('https://scriptologic-ux85-l2q5kxr99-aynas2112.vercel.app/contact',{name,email,message})
 
     try {
       const response = await fetch('http://localhost:5000/submit', {
