@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, Paper, TextField, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,20 +8,22 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
-    padding: theme.spacing(2), // Add padding to the root element
+    padding: theme.spacing(2),
   },
   formContainer: {
     width: '100%',
     maxWidth: '400px',
     padding: theme.spacing(3),
-    marginBottom: theme.spacing(3), // Add margin to increase space between the form and footer
+    marginBottom: theme.spacing(3),
   },
   form: {
     display: 'flex',
     flexDirection: 'column',
-    gap: theme.spacing(2), // Add space between form elements
+    gap: theme.spacing(2),
   },
 }));
+
+const backendURL = 'https://scriptologic-hxsp.vercel.app/';
 
 const Contact = () => {
   const classes = useStyles();
@@ -35,10 +36,9 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    axios.post('https://scriptologic-ux85-l2q5kxr99-aynas2112.vercel.app/contact', formData).then(result => console.log(result)).catch(error => console.log(error))
 
     try {
-      const response = await fetch('https://scriptologic-ux85-l2q5kxr99-aynas2112.vercel.app/submit', {
+      const response = await fetch(`${backendURL}/submit`, {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
@@ -109,7 +109,6 @@ const Contact = () => {
         </form>
         {message && <Typography variant="body1">{message}</Typography>}
       </Paper>
-      {/* Footer or other content */}
     </div>
   );
 };
