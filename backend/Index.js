@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ["https://scriptologic.vercel.app/contact"],
+  origin: ["https://scriptologic-ux85-l2q5kxr99-aynas2112.vercel.app/contact"],
   methods: ["POST", "GET"],
   credentials: true,
 }));
