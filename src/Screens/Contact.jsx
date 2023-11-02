@@ -35,7 +35,7 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    axios.post('https://scriptologic-ux85-l2q5kxr99-aynas2112.vercel.app/contact',{name,email,message})
+    axios.post('https://scriptologic-ux85-l2q5kxr99-aynas2112.vercel.app/contact', formData).then(result => console.log(result)).catch(error => console.log(error))
 
     try {
       const response = await fetch('http://localhost:5000/submit', {

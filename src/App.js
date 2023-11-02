@@ -8,7 +8,7 @@ import { MyContextProvider } from './Components/MyContext';
 import Footer from './Components/Footer';
 import { ThemeProvider } from '@mui/styles';
 import { createTheme } from '@mui/material';
-import axios from 'axios';
+// import axios from 'axios';
 
 
 const App = () => {
@@ -22,7 +22,6 @@ const App = () => {
       },
     },
   });
-  axios.defaults.withCredentials=true;
   return (
     <>
       <MyContextProvider>
