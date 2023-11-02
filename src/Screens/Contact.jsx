@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const backendURL = 'https://scriptologic-hxsp.vercel.app/';
+const backendURL = 'https://scriptologic-hxsp.vercel.app//submit';
 
 const Contact = () => {
   const classes = useStyles();
