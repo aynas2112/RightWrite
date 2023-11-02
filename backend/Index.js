@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://scriptologic.vercel.app', // Update with your frontend's URL
+  origin: 'https://scriptologic.app', // Update with your frontend's URL
   methods: ["POST", "GET"],
   credentials: true,
 }));

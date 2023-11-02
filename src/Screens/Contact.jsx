@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Paper, TextField, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -8,22 +9,20 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
-    padding: theme.spacing(2),
+    padding: theme.spacing(2), // Add padding to the root element
   },
   formContainer: {
     width: '100%',
     maxWidth: '400px',
     padding: theme.spacing(3),
-    marginBottom: theme.spacing(3),
+    marginBottom: theme.spacing(3), // Add margin to increase space between the form and footer
   },
   form: {
     display: 'flex',
     flexDirection: 'column',
-    gap: theme.spacing(2),
+    gap: theme.spacing(2), // Add space between form elements
   },
 }));
-
-const backendURL = 'https://scriptologic-hxsp.vercel.app//submit';
 
 const Contact = () => {
   const classes = useStyles();
@@ -33,6 +32,9 @@ const Contact = () => {
     message: '',
   });
   const [message, setMessage] = useState('');
+
+  // Update your backend URL
+  const backendURL = 'https://scriptologic-hxsp.vercel.app';
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -109,6 +111,7 @@ const Contact = () => {
         </form>
         {message && <Typography variant="body1">{message}</Typography>}
       </Paper>
+      {/* Footer or other content */}
     </div>
   );
 };
