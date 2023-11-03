@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://vercel.com/aynas2112/scriptologic/CzZNSz4YE8UR5der4ZRC9xoPNMAV', // Update with your frontend's URL
+  origin: '*', // Update with your frontend's URL
   // Access-Control-Allow-Origin:'*',
   methods: ["POST", "GET"],
   credentials: true,
