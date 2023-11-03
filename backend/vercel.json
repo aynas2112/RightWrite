@@ -3,12 +3,6 @@
     "builds": [
       { "src": "*.js", "use": "@vercel/node" }
     ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/$1"
-      }
-    ],
     "headers": [
       {
         "source": "/api/(.*)",
@@ -19,6 +13,14 @@
           { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
         ]
       }
-    ]
+    ],
+    "rewrites": [
+      { "source": "/api/(.*)", "destination": "/$1" }
+    ],
+    "redirects": [
+      { "source": "/old", "destination": "/new", "statusCode": 301 }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": true
   }
   
