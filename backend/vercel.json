@@ -15,7 +15,7 @@
       }
     ],
     "rewrites": [
-      { "source": "/(.*)", "destination": "/$1" }
+      { "source": "*", "destination": "/$1" }
     ],
     "redirects": [
       { "source": "/old", "destination": "/new", "statusCode": 301 }
