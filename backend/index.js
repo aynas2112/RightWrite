@@ -11,7 +11,9 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(cors(
   {
-    origin:"https://scriptologic.vercel.app/"
+    origin:"https://scriptologic.vercel.app/",
+    methods: "GET, HEAD, POST, PATCH, DELETE, OPTIONS",
+    credentials: true
   }
 ));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -59,3 +61,5 @@ app.post('/submit', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;
