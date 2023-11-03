@@ -9,11 +9,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({
-  origin: 'https://scriptologic.app', // Update with your frontend's URL
-  methods: ["POST", "GET"],
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: 'https://scriptologic.app', // Update with your frontend's URL
+//   methods: ["POST", "GET"],
+//   credentials: true,
+// }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
