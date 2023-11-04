@@ -9,13 +9,13 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors(
-  {
-    origin:"https://scriptologic.vercel.app/",
-    methods: "GET, HEAD, POST, PATCH, DELETE, OPTIONS",
-    credentials: true
-  }
-));
+// app.use(cors(
+//   {
+//     origin:"https://scriptologic.vercel.app/",
+//     methods: "GET, HEAD, POST, PATCH, DELETE, OPTIONS",
+//     credentials: true
+//   }
+// ));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
