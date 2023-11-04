@@ -9,15 +9,17 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors(
-  {
-    origin:"https://scriptologic.vercel.app/"
-  }
-));
+// app.use(cors(
+//   {
+//     origin:"https://scriptologic.vercel.app/",
+//     methods: "GET, HEAD, POST, PATCH, DELETE, OPTIONS",
+//     credentials: true
+//   }
+// ));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Connect to MongoDB using the environment variable
+// Connect to MongoDB 
 mongoose.connect(process.env.MONGODB_URI, {
   dbName: 'Message',
   useNewUrlParser: true,
@@ -30,6 +32,10 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
   console.log('Connected to MongoDB');
 });
+
+app.get("/", (req, res)=> {
+  res.send("Hello World")
+})
 
 // Define a route to handle form submissions
 app.post('/submit', async (req, res) => {
@@ -59,3 +65,5 @@ app.post('/submit', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;
