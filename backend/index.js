@@ -33,6 +33,10 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
+app.get("/", (req, res)=> {
+  res.send("Hello World")
+})
+
 // Define a route to handle form submissions
 app.post('/submit', async (req, res) => {
   const { name, email, message } = req.body;
