@@ -19,7 +19,7 @@ app.use(cors(
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Connect to MongoDB using the environment variable
+// Connect to MongoDB 
 mongoose.connect(process.env.MONGODB_URI, {
   dbName: 'Message',
   useNewUrlParser: true,
