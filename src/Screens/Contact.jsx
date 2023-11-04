@@ -34,7 +34,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
 
   // Update your backend URL
-  const backendURL = 'https://scriptologic-api.vercel.app/';
+  const backendURL = 'https://scriptologic-api.vercel.app';
 
   const handleSubmit = async (event) => {
     event.preventDefault();
