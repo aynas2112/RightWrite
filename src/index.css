@@ -165,3 +165,34 @@ Box{
   margin-top: 1%;
   margin-bottom: 1%;
 }
+
+.blogs-container {
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.blog-post {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 40px;
+  border-radius: 8px; 
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; 
+}
+
+@media (max-width: 768px) {
+  .blogs-container {
+    margin-left: 10px;
+  }
+
+  .blog-post {
+    width: 50%; 
+  }
+}
+
+.blogs-heading{
+  margin-bottom: 50px;
+  text-align: center;
+}

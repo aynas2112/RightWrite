@@ -8,6 +8,7 @@ import { MyContextProvider } from './Components/MyContext';
 import Footer from './Components/Footer';
 import { ThemeProvider } from '@mui/styles';
 import { createTheme } from '@mui/material';
+import Blogs from './Screens/Blogs';
 // import axios from 'axios';
 
 
@@ -34,6 +35,7 @@ const App = () => {
                 <Route path="/" exact element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/blogs" element={<Blogs />} />
               </Routes>
             </div>
             <Footer style={{ marginTop: '5%' }} />

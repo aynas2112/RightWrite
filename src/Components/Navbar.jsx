@@ -44,6 +44,7 @@ const Navbar = () => {
     { text: 'Home', link: '/' },
     { text: 'About', link: '/about' },
     { text: 'Contact', link: '/contact' },
+    { text: 'Blogs', link: '/blogs' },
   ];
 
   const drawer = (
@@ -88,6 +89,9 @@ const Navbar = () => {
             </Button>
             <Button style={{ color: '#fff' }} component={Link} to="/contact" className={classes.navButton}>
               Contact
+            </Button>
+            <Button style={{ color: '#fff' }} component={Link} to="/blogs" className={classes.navButton}>
+              Blogs
             </Button>
           </Toolbar>
         </AppBar>
