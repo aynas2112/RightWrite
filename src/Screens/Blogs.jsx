@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import blogData from '../Components/blog';
 import { Button, CardMedia } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
   const [expandedBlogs, setExpandedBlogs] = useState([]);
@@ -33,12 +34,14 @@ const Blogs = () => {
           <p>
             {expandedBlogs.includes(blog.id) ? blog.content : `${blog.content.split(' ').slice(0, 10).join(' ')}...`}
           </p>
-          <Button 
-            onClick={() => toggleContent(blog.id)}
-            style={{ backgroundColor: '#2196f3', color: '#fff' }}
-          >
-            {expandedBlogs.includes(blog.id) ? 'Read Less' : 'Read More'}
-          </Button>
+          <Link to={`/blogs/${blog.id}`}>
+            <Button 
+              onClick={() => toggleContent(blog.id)}
+              style={{ backgroundColor: '#2196f3', color: '#fff' }}
+            >
+              {expandedBlogs.includes(blog.id) ? 'Read Less' : 'Read More'}
+            </Button>
+          </Link>
         </div>
       ))}
     </div>

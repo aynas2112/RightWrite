@@ -13,10 +13,13 @@ const AboutGraphology = () => {
       </h2>
       <p
         style={{
-          marginLeft: '5%', // Adjusted for smaller screens
+          marginLeft: '30%', // Adjusted for smaller screens
           marginRight: '5%', // Adjusted for smaller screens
           marginTop: '10px',
           color: '#090050',
+          width: '40%',
+          textAlign: 'justify',
+          fontSize:'1.4em'
         }}
       >
         Graphology is the pseudoscientific study and analysis of handwriting, especially in relation to human psychology. It suggests that one's handwriting can reveal a lot about their personality, emotions, and psychological state. It's important to note that graphology is not considered a legitimate or scientifically valid field of study by the mainstream scientific community.
@@ -26,9 +29,11 @@ const AboutGraphology = () => {
       </h2>
       <ul
         style={{
-          marginLeft: '5%', // Adjusted for smaller screens
-          marginRight: '5%', // Adjusted for smaller screens
+          marginLeft: '30%', // Adjusted for smaller screens
+          marginRight: '30%', // Adjusted for smaller screens
           marginTop: '2.5%',
+          textAlign: 'justify',
+          fontSize:'1.4em'
         }}
       >
         <li style={listItemStyle}>

@@ -9,8 +9,10 @@ import Footer from './Components/Footer';
 import { ThemeProvider } from '@mui/styles';
 import { createTheme } from '@mui/material';
 import Blogs from './Screens/Blogs';
-// import axios from 'axios';
-
+import BlogDetail from './Components/BlogDetail';
+import TermsOfService from './Components/TermsOfService';
+import Disclaimer from './Components/Disclaimer';
+import PrivacyPolicy from './Components/PrivacyPolicy';
 
 const App = () => {
   const theme = createTheme({
@@ -23,24 +25,29 @@ const App = () => {
       },
     },
   });
+
   return (
     <>
       <MyContextProvider>
-      <ThemeProvider theme={theme}>
-        <Router>
-          <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            <div style={{ flex: 1 }}>
-              <Navbar />
-              <Routes>
-                <Route path="/" exact element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blogs" element={<Blogs />} />
-              </Routes>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+              <div style={{ flex: 1 }}>
+                <Navbar />
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/blogs" element={<Blogs />} />
+                  <Route path="/blogs/:blogId" element={<BlogDetail />} />
+                  <Route path="/terms" element={<TermsOfService />} />
+                  <Route path="/disclaimer" element={<Disclaimer />} />
+                  <Route path="/privacy" element={<PrivacyPolicy />} />
+                </Routes>
+              </div>
+              <Footer style={{ marginTop: '5%' }} />
             </div>
-            <Footer style={{ marginTop: '5%' }} />
-          </div>
-        </Router>
+          </Router>
         </ThemeProvider>
       </MyContextProvider>
     </>

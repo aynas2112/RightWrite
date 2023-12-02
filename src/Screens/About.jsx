@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center', // Center content horizontally
     justifyContent: 'center', // Center content vertically
     minHeight: '100vh', // Ensure the container takes at least the full viewport height
+    
   },
   nameContainer: {
     display: 'flex',
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
     height: 'auto',
     transition: 'transform 0.3s ease', // Match the transition with the container
-    marginLeft: theme.spacing(2), // Add margin to the right of the image
+    // marginLeft: theme.spacing(2), // Add margin to the right of the image
   },
   quote: {
     marginTop: theme.spacing(2),
@@ -45,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paragraphs: {
     marginTop: theme.spacing(2), // Add margin to the top of the paragraphs
+    marginLeft:'20%'
   },
 }));
 
